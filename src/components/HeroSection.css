@@ -1,0 +1,113 @@
+img {
+    object-fit: fill;
+    width: 100%;
+    height: 87%;
+    margin-top: -1vw;
+    position: relative;
+    z-index: -1;
+}
+
+.gradient__text {
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.solid__text > h1 {
+    color: #092F8E;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 1000px transparent;
+    margin-top: 0vw;
+    background-image:
+    url(../images/Opening\ Page\ Final.jpg);
+    background-size: 100% 100%;
+    object-fit: fill;
+    height: 100vh;
+    width: 100%;
+    resize: both;
+}
+
+.hero-container > h1 {
+    color: #092F8E;
+    font-size: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: left;
+    position: relative;
+}
+
+.heading-wrapper {
+    justify-content: left;
+    align-items: left;
+    margin-top: 8.2vw;
+    position: relative;
+}
+
+.heading-wrapper > h1 {
+    color: #0B3D89;
+    font-size: 7.8vw;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    padding-left: 15vw;
+    left: 200px;
+    margin-top: 1vw;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.hero-container > p {
+    margin-top: 25px;
+    color: white;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 200px;
+    left: 200px;
+}
+
+.hero-btns {
+    margin-top: 32px;
+    margin-left: 190px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-btns .btn {
+    margin: 6px;
+}
+
+.fa-play-circle {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container > h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container > h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    } 
+
+    .hero-container > p {
+        font-size: 30px;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

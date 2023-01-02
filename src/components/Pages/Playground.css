@@ -1,0 +1,23 @@
+.front img {
+    object-fit: fill;
+    width: 100%;
+    height: 115%;
+    position: absolute;
+    z-index: -1;
+    margin-top: -5vw;
+}
+
+.playground-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 1000px transparent;
+    object-fit: scale-down;
+    margin-top: 0vw;
+    background-image:
+    url(../../images/Text\ Background\ 2.jpg);
+    background-size: 100% 100%;
+    object-fit: fill;
+    height: 120vh;
+    width: 100%;
+    resize: both;
+}

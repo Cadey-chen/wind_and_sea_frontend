@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: transparent;
+}
+
+.home,
+.about,
+.getInvolved,
+.funFacts {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.about {
+  background-image: url('./images/Spain_Orange_Trees_White_House.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.getInvolved {
+  background-image: url('./images/Spain_Orange_Trees_White_House.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.funFacts {
+  background-image: url('./images/Spain_Orange_Trees_White_House.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.gradient__bg {
+  /* ff 3.6+ */
+background:-moz-linear-gradient(105deg, rgba(236, 239, 182, 1) 0%, rgba(190, 235, 252, 1) 46%, rgba(190, 235, 252, 1) 52%, rgba(233, 212, 245, 1) 100%); 
+
+/* safari 5.1+,chrome 10+ */
+background:-webkit-linear-gradient(105deg, rgba(236, 239, 182, 1) 0%, rgba(190, 235, 252, 1) 46%, rgba(190, 235, 252, 1) 52%, rgba(233, 212, 245, 1) 100%);
+
+/* opera 11.10+ */
+background:-o-linear-gradient(105deg, rgba(236, 239, 182, 1) 0%, rgba(190, 235, 252, 1) 46%, rgba(190, 235, 252, 1) 52%, rgba(233, 212, 245, 1) 100%);
+
+/* ie 6-9 */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E9D4F5', endColorstr='#ECEFB6', GradientType=0 );
+
+/* ie 10+ */
+background:-ms-linear-gradient(105deg, rgba(236, 239, 182, 1) 0%, rgba(190, 235, 252, 1) 46%, rgba(190, 235, 252, 1) 52%, rgba(233, 212, 245, 1) 100%);
+
+/* global 94%+ browsers support */
+background:linear-gradient(105deg, rgba(236, 239, 182, 1) 0%, rgba(190, 235, 252, 1) 46%, rgba(190, 235, 252, 1) 52%, rgba(233, 212, 245, 1) 100%);
+}
+
+.gradient__text {
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem 6rem;
+  }
+  .section__margin {
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .section__margin {
+    margin: 4rem 2rem;
+  }
+}

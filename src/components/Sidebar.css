@@ -1,0 +1,84 @@
+.sideBar {
+    background-color: transparent;
+    height: 20px;
+    right: 2px;
+}
+
+.icon-bars {
+    position: absolute;
+    color: #0B3D89;
+    right: 4vw;
+    top: 3vw;
+    margin-left: 10rem;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+    background: none;
+}
+
+.menu-bars {
+    margin-left: 1.2rem;
+    margin-bottom: -0.3rem;
+    font-size: 2rem;
+    background: none;
+}
+
+.nav-menu {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -120%;
+    top: 0;
+    transition: 850ms;
+}
+
+.nav-menu.active {
+    transition: 350ms;
+    position: absolute;
+    right: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: #0B3D89;
+    font-size: 20px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    border-radius: 4px;
+}
+
+.nav-text a:hover {
+    background-color: #b09dc7;
+    fill-opacity: 0.5;
+}
+
+.nav-menu-items {
+    width: 50%;
+}
+
+.navbar-toggle {
+    background-color:#b09dc7;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+span {
+    margin-right: 10px;
+}
