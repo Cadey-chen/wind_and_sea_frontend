@@ -1,15 +1,36 @@
 import React, {useState, useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 import {FaUser} from 'react-icons/fa';
+import { register, reset } from '../../features/auth/authSlice';
+import { toast } from 'react-toastify';
+import './Register.css';
 
 function Register() {
     const [formData, setFormData] = useState({
-        name: '',
+        username: '',
         email: '',
         password: '',
         cPassword: ''
     })
 
-    const {name, email, password, cPassword} = formData;
+    const {username, email, password, cPassword} = formData;
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
+
+    useEffect(() => {
+        if (isError) {
+            toast.error(message);
+        }
+        if (isSuccess || user) {
+            navigate('/Playground');
+        }
+
+        dispatch (reset());
+    }, [user, isError, isSuccess, message, navigate, dispatch])
 
     const handleChange = (e) => {
         setFormData((prevState) => ({
@@ -20,6 +41,20 @@ function Register() {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        if (password !== cPassword) {
+            toast.error('Passwords do not match.');
+        } else {
+            const userData = {
+                username,
+                email,
+                password,
+            }
+
+            console.log(userData);
+
+            dispatch(register(userData));
+        }
     }
 
   return (
@@ -34,7 +69,7 @@ function Register() {
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>
-            <input type="text" className="form-control" id="name" name='name' value={name} placeholder='Enter Username' onChange={handleChange}/>
+            <input type="text" className="form-control" id="name" name='username' value={username} placeholder='Enter Username' onChange={handleChange}/>
             </div>
             <div className='form-group'>
             <input type="text" className="form-control" id="email" name='email' value={email} placeholder='Enter Email Address' onChange={handleChange}/>

@@ -10,6 +10,9 @@ import Playground from './components/Pages/Playground';
 import HMenu from './components/hMenu';
 import Explore from './components/Pages/Explore';
 import Footer from './components/Pages/Footer';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Register from './components/Pages/Register';
 
 function App() {
   return (
@@ -26,9 +29,11 @@ function App() {
       <Route path="/Timeline" element={<Timeline />}></Route>
       <Route path="/Playground" element={<Playground />}></Route>
       <Route path="/Explore" element={<Explore />}></Route>
+      <Route path="/Register" element={<Register/>}></Route>
       </Routes>
       </div>
     </Router>
+    <ToastContainer />
     </>      
   );
 }

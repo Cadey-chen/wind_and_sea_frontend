@@ -1,13 +1,34 @@
 import React, {useState, useEffect} from 'react';
 import {FaSignInAlt} from 'react-icons/fa';
+import { useSelector, useDispatch } from 'react-redux';
+import {useNavigate} from 'react-router-dom';
+import { login, reset } from '../../features/auth/authSlice';
+import { toast } from 'react-toastify';
+import './Register.css';
 
 function Login() {
     const [formData, setFormData] = useState({
-        name: '',
+        username: '',
         password: ''
     })
 
-    const {name, password} = formData;
+    const {username, password} = formData;
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
+
+    useEffect(() => {
+        if (isError) {
+            toast.error(message);
+        }
+        if (isSuccess || user) {
+            navigate('/Playground');
+        }
+
+        dispatch (reset());
+    }, [user, isError, isSuccess, message, navigate, dispatch])
 
     const handleChange = (e) => {
         setFormData((prevState) => ({
@@ -18,6 +39,13 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        const userData = {
+            username,
+            password
+        }
+
+        dispatch(login(userData));
     }
 
   return (
@@ -32,7 +60,7 @@ function Login() {
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>
-            <input type="text" className="form-control" id="name" name='name' value={name} placeholder='Enter Username' onChange={handleChange}/>
+            <input type="text" className="form-control" id="name" name='username' value={username} placeholder='Enter Username' onChange={handleChange}/>
             </div>
             <div className='form-group'>
             <input type="password" className="form-control" id="password" name='password' value={password} placeholder='Enter Password' onChange={handleChange}/>

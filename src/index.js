@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from 'redux';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const element = (
@@ -11,7 +14,18 @@ const element = (
     <h2>it is {new Date().toLocaleTimeString()}.</h2>
   </div>
 );
-root.render(<App />);
+root.render(<Provider store={store}><App /></Provider>);
+
+/*
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+*/
 
 
 // setInterval(tick, 1000);
