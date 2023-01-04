@@ -21,3 +21,10 @@
     width: 100%;
     resize: both;
 }
+
+.heading {
+    position: relative;
+    margin-top: 5vw;
+    font-size: large;
+    font-family: 'Inter', sans-serif;
+}

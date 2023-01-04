@@ -51,7 +51,7 @@ function Register() {
                 password,
             }
 
-            console.log(userData);
+            // console.log(userData);
 
             dispatch(register(userData));
         }
@@ -82,7 +82,7 @@ function Register() {
             </div>
             <div className="form-group">
                 <button type="submit" className='btn btn-block'>
-                    Submit
+                    Register
                 </button>
             </div>
         </form>

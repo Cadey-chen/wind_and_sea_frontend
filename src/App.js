@@ -13,6 +13,8 @@ import Footer from './components/Pages/Footer';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Register from './components/Pages/Register';
+import Login from './components/Pages/Login';
+import Logout from './components/Pages/Logout';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <Route path="/Playground" element={<Playground />}></Route>
       <Route path="/Explore" element={<Explore />}></Route>
       <Route path="/Register" element={<Register/>}></Route>
+      <Route path="/Login" element={<Login />}></Route>
+      <Route path="/Logout" element={<Logout />}></Route>
       </Routes>
       </div>
     </Router>

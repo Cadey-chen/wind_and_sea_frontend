@@ -60,3 +60,9 @@
 .btn:hover {
   transform: scale(0.98);
 }
+
+.logout-wrap {
+  position: relative;
+  margin-top: 10vw;
+  margin-left: 10vw;
+}
