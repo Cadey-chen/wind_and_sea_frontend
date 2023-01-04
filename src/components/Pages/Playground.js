@@ -14,7 +14,9 @@ function Playground() {
       <section className="heading">
         <h1>Welcome {user && user.username}</h1>
       </section>
-      <BookForm />
+      <div className="book-form-container">
+        <BookForm /> 
+      </div>
     </div>
   )
 }

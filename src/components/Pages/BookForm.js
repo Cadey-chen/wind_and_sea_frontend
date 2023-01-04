@@ -1,30 +1,81 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { createBook } from '../../features/authors/authorSlice';
-import React from 'react';
+import './Register.css';
 
 function BookForm() {
-    const [book, setBook] = useState('');
+    const { user } = useSelector((state) => state.auth);
+
+    const [book, setBook] = useState({
+        type: '',
+        title: '',
+        author: '',
+        description: '',
+        yearPublished: '',
+        url: '',
+        userID: user._id
+    });
+
+    const { type, title, author, description, yearPublished, url, userID } = book;
 
     const dispatch = useDispatch();
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        dispatch(createBook({book}));
+        const bookData = {
+            type,
+            title, 
+            author, 
+            description, 
+            yearPublished, 
+            url, 
+            userID
+        }
+
+        console.log(bookData);
+
+        dispatch(createBook(bookData));
         setBook('');
+    }
+
+    const handleChange = (e) => {
+        setBook((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value
+        }))
     }
 
   return (
     <section className='form'>
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor="book">Author</label>
-                <input type="text" name="book" id="book" value={book} onChange={(e) => setBook(e.target.value)}/>
+                <label>Type</label>
+                <input type="text" name="type" id="type" value={book.type} placeholder="e.g. Book, research papers" onChange={handleChange}/>
+            </div>
+            <div className="form-group">
+                <label>Title</label>
+                <input type="text" name="title" id="title" value={book.title} placeholder="Title" onChange={handleChange}/>
+            </div>
+            <div className="form-group">
+                <label>Author</label>
+                <input type="text" name="author" id="author" value={book.author} onChange={handleChange}/>
+            </div>
+            <div className="form-group">
+                <label>Description</label>
+                <input type="text" name="description" id="description" value={book.description} onChange={handleChange}/>
+            </div>
+            <div className="form-group">
+                <label>Year Published</label>
+                <input type="text" name="yearPublished" id="yearPublished" value={book.yearPublished} onChange={handleChange}/>
+            </div>
+            <div className="form-group">
+                <label>URL (optional)</label>
+                <input type="text" name="url" id="url" value={book.url} onChange={handleChange}/>
             </div>
             <div className="form-group">
                 <button className="btn btn-block" type="submit">
-                    Add Book
+                    Add Source 
                 </button>
             </div>
         </form>

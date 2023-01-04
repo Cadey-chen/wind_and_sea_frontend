@@ -28,3 +28,9 @@
     font-size: large;
     font-family: 'Inter', sans-serif;
 }
+
+.book-form-container {
+    position: relative;
+    margin-top: 10vw;
+    margin-left: 10vw;
+}

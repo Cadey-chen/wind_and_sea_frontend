@@ -1,6 +1,6 @@
 import React from 'react';
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import { authorService } from './authorService';
+import authorService from './authorService';
 
 const initialState = {
     authors: [],
@@ -11,8 +11,7 @@ const initialState = {
 
 export const createBook = createAsyncThunk('books/create', async (bookData, thunkAPI) => {
     try {
-        const id = thunkAPI.getState().auth.user._id;
-        return await authorService.createBook(bookData, id);
+        return await authorService.createBook(bookData);
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
 
