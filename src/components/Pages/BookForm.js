@@ -36,7 +36,15 @@ function BookForm() {
         console.log(bookData);
 
         dispatch(createBook(bookData));
-        setBook('');
+        setBook({
+            type: '',
+            title: '',
+            author: '',
+            description: '',
+            yearPublished: '',
+            url: '',
+            userID: user._id
+        });
     }
 
     const handleChange = (e) => {
