@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Register from './components/Pages/Register';
 import Login from './components/Pages/Login';
 import Logout from './components/Pages/Logout';
+import LoginForm from './components/Pages/LoginForm';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Route path="/Timeline" element={<Timeline />}></Route>
       <Route path="/Playground" element={<Playground />}></Route>
       <Route path="/Explore" element={<Explore />}></Route>
+      <Route path="/LoginForm" element={<LoginForm/>}></Route>
       <Route path="/Register" element={<Register/>}></Route>
       <Route path="/Login" element={<Login />}></Route>
       <Route path="/Logout" element={<Logout />}></Route>

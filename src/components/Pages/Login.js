@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {FaSignInAlt} from 'react-icons/fa';
+import { FaSignInAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { login, reset } from '../../features/auth/authSlice';
 import { toast } from 'react-toastify';
 import './Register.css';
+import Spinner from '../Spinner';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -23,6 +24,7 @@ function Login() {
         if (isError) {
             toast.error(message);
         }
+
         if (isSuccess || user) {
             navigate('/Playground');
         }
@@ -46,6 +48,10 @@ function Login() {
         }
 
         dispatch(login(userData));
+    }
+
+    if (isLoading) {
+        return <Spinner />;
     }
 
   return (
