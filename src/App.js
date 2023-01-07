@@ -35,7 +35,6 @@ function App() {
       <Route path="/LoginForm" element={<LoginForm/>}></Route>
       <Route path="/Register" element={<Register/>}></Route>
       <Route path="/Login" element={<Login />}></Route>
-      <Route path="/Logout" element={<Logout />}></Route>
       </Routes>
       </div>
     </Router>

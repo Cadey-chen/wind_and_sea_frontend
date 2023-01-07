@@ -17,7 +17,7 @@ const register = async (userData) => {
     const response = await axios.post('http://localhost:8080/users/create', userData);
 
     if (response.data) {
-        localStorage.setItem('user', JSON.stringify(response.data));
+        localStorage.setItem('user', JSON.stringify(response.data.user));
     }
 
     return response.data.user;
@@ -39,7 +39,7 @@ const login = async (userData) => {
     const response = await axios.post('http://localhost:8080/users/login', userData);
 
     if (response.data) {
-        localStorage.setItem('user', JSON.stringify(response.data));
+        localStorage.setItem('user', JSON.stringify(response.data.user));
     }
 
     return response.data.user;

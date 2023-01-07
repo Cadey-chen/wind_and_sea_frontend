@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { createBook } from '../../features/authors/authorSlice';
+import { createBook, reset } from '../../features/books/bookSlice';
 import './Register.css';
 
 function BookForm() {
@@ -36,6 +36,8 @@ function BookForm() {
         console.log(bookData);
 
         dispatch(createBook(bookData));
+        window.location.reload();
+        
         setBook({
             type: '',
             title: '',
@@ -45,6 +47,10 @@ function BookForm() {
             url: '',
             userID: user._id
         });
+
+        return () => {
+            dispatch(reset());
+        }
     }
 
     const handleChange = (e) => {
