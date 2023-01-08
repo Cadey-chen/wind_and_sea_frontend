@@ -2,12 +2,13 @@ import axios from 'axios';
 
 // Create new book 
 const createBook = async (bookData) => {
-    const response = await axios.post('http://localhost:8080/books/create', bookData);
+    const response = await axios.post('https://dwrestapi.herokuapp.com/books/create', bookData);
+    console.log(response.data);
     return response.data;
 }
 
 const getAllBooks = async (id) => {
-    const response = await axios.get('http://localhost:8080/books/getByUser/' + id);
+    const response = await axios.get('https://dwrestapi.herokuapp.com/books/getByUser/' + id);
     console.log(response.data);
     return response.data;
 }
@@ -17,13 +18,13 @@ const editBook = async (newBook) => {
     console.log(id);
     delete newBook._id;
     console.log(newBook);
-    const response = await axios.patch('http://localhost:8080/books/update/' + id, newBook);
+    const response = await axios.patch('https://dwrestapi.herokuapp.com/books/update/' + id, newBook);
     console.log(response.data);
     return response.data;
 }
 
 const deleteBook = async (id) => {
-    const response = await axios.delete('http://localhost:8080/books/delete/' + id);
+    const response = await axios.delete('https://dwrestapi.herokuapp.com/books/delete/' + id);
     console.log(response.data);
     return response.data;
 }

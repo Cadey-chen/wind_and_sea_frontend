@@ -45,18 +45,12 @@ function BookCard({book}) {
     const handleUpdate = () => {
         const newBook = {_id, userID, type, title, author, description, yearPublished, url};
         console.log(newBook);
-    
-        dispatch(editBook(newBook));
-    
         handleClose();
-
-        window.location.reload();
+        dispatch(editBook(newBook));
       }
     
       const handleDelete = () => {
         dispatch(deleteBook(_id));
-    
-        window.location.reload();
       }
 
   return (

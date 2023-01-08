@@ -84,6 +84,7 @@ export const bookSlice = createSlice({
             state.isLoading = false;
             state.isSuccess = true;
             state.books.push(action.payload);
+            window.location.reload();
         })
         .addCase(createBook.rejected, (state, action) => {
             state.isLoading = false;
@@ -103,6 +104,7 @@ export const bookSlice = createSlice({
         .addCase(editBook.fulfilled, (state, action) => {
             state.isLoading = false;
             state.isSuccess = true;
+            window.location.reload();
         })
         .addCase(editBook.rejected, (state, action) => {
             state.isLoading = false;
@@ -115,6 +117,7 @@ export const bookSlice = createSlice({
             state.books = state.books.filter(
                 ((books) => books._id !== action.payload.id)
             )
+            window.location.reload();
         })
         .addCase(deleteBook.rejected, (state, action) => {
             state.isLoading = false;

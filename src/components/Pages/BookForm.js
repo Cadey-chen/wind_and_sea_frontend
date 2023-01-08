@@ -36,7 +36,6 @@ function BookForm() {
         console.log(bookData);
 
         dispatch(createBook(bookData));
-        window.location.reload();
         
         setBook({
             type: '',

@@ -8,7 +8,7 @@ function Explore() {
   const [books, setBooks] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8080/books/get')
+    fetch('https://dwrestapi.herokuapp.com/books/get')
     .then(res => {
       return res.json();
     })
