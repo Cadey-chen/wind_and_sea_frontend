@@ -19,6 +19,7 @@ function BookCard({book}) {
     const dispatch = useDispatch();
 
     const [show, setShow] = useState(false);
+    const [showConfirm, setShowConfirm] = useState(false);
     const [updatedBook, setUpdatedBook] = useState({
       _id: book._id,
       userID: book.userID,
@@ -34,6 +35,9 @@ function BookCard({book}) {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleCloseConfirm = () => setShowConfirm(false);
+    const handleShowConfirm = () => setShowConfirm(true);
   
     const handleChange = (e) => {
       setUpdatedBook((prevState) => ({
@@ -57,7 +61,16 @@ function BookCard({book}) {
     <div>
         {book.title}
     <Button onClick={handleShow}>Edit</Button>
-    <Button onClick={handleDelete}>Delete</Button>
+    <Modal show={showConfirm} onHide={handleCloseConfirm}>
+      <Modal.Body>
+        <h1>Are you sure you want to delete {book.title}?</h1>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={handleDelete}>Yes</Button>
+        <Button onClick={handleCloseConfirm}>Cancel</Button>
+      </Modal.Footer>
+    </Modal>
+    <Button onClick={handleShowConfirm}>Delete</Button>
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>
