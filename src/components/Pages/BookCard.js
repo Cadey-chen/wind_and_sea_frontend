@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Button from '@mui/material/Button';
 import { editBook, deleteBook } from '../../features/books/bookSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import './BookCard.css';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import '../../App.css';
 
 // Have a list group displaying all book titles 
 // uploaded by current user, have a Details 
@@ -48,7 +52,6 @@ function BookCard({book}) {
 
     const handleUpdate = () => {
         const newBook = {_id, userID, type, title, author, description, yearPublished, url};
-        console.log(newBook);
         handleClose();
         dispatch(editBook(newBook));
       }
@@ -59,38 +62,89 @@ function BookCard({book}) {
 
   return (
     <div>
+      <h3 className="book-title">
         {book.title}
-    <Button onClick={handleShow}>Edit</Button>
-    <Modal show={showConfirm} onHide={handleCloseConfirm}>
-      <Modal.Body>
-        <h1>Are you sure you want to delete {book.title}?</h1>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={handleDelete}>Yes</Button>
-        <Button onClick={handleCloseConfirm}>Cancel</Button>
-      </Modal.Footer>
+      </h3>
+    <Button variant="contained" onClick={handleShow} sx={{mt: 1, mb: 1}}>Edit</Button>
+    <Button variant="contained" onClick={handleShowConfirm} sx={{mt: 1, ml: 2, mb: 1}}>Delete</Button>
+    <Modal hidebackdrop open={showConfirm} onClose={handleCloseConfirm}
+    aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+      <Box position="absolute" top="37%" left="37%" sx={{
+        width: 500,
+        height: 200,
+        backgroundColor: 'white',
+        outlineColor: 'black',
+        border: 1,
+      }}>
+        <Typography id="modal-modal-title" height="2vw"
+        sx={{
+          m: 5,
+        }}>Are you sure you want to delete {book.title}?</Typography>
+        <Button variant="contained" onClick={handleDelete}
+        sx={{ml: 5, mt: 0}}>Yes</Button>
+        <Button variant="contained" onClick={handleCloseConfirm} sx={{ml: 3, mt: 0}}>Cancel</Button>
+      </Box>
     </Modal>
-    <Button onClick={handleShowConfirm}>Delete</Button>
-    <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>
-            {book.title}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <input type="text" name="type" id="type" value={updatedBook.type} label="Type" onChange={handleChange}/>
-          <input type="text" name="title" id="title" value={updatedBook.title} label="Title" onChange={handleChange}/>
-          <input type="text" name="author" id="author" value={updatedBook.author} label="Author" onChange={handleChange}/>
-          <input type="text" name="description" id="description" value={updatedBook.description} label="Description" onChange={handleChange}/>
-          <input type="text" name="yearPublished" id="yearPublished" value={updatedBook.yearPublished} label="Year Published" onChange={handleChange}/>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={handleUpdate}>Update</Button>
-          <Button onClick={handleClose}>Cancel</Button>
-        </Modal.Footer>
+    <Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+      <Box sx={{
+        mt: 10,
+        ml: 80,
+        width: 600,
+        height: 800,
+        backgroundColor: 'white',
+        border: 1
+      }}>
+          <div className="title">
+            <h2>{book.title}</h2>
+          </div>
+        <div>
+          <div className="entry">
+          <TextField type="text" variant="outlined" name="type" id="type" value={updatedBook.type} label="Type" onChange={handleChange}
+          sx={{width: 450}}/>
+          </div>
+          <div className="entry">
+          <TextField variant="outlined" type="text" name="title" id="title" value={updatedBook.title} label="Title" onChange={handleChange} sx={{width: 450}}/>
+          </div>
+          <div className="entry">
+          <TextField variant="outlined" type="text" name="author" id="author" value={updatedBook.author} label="Author" onChange={handleChange} sx={{width: 450}}/>
+          </div>
+          <div className="entry">
+          <TextField multiline variant="outlined" type="text" name="description" id="description" value={updatedBook.description} label="Description" onChange={handleChange} sx={{width: 450}}/>
+          </div>
+          <div className="entry">
+          <TextField variant="outlined" type="text" name="yearPublished" id="yearPublished" value={updatedBook.yearPublished} label="Year Published" onChange={handleChange} sx={{width: 450}}/>
+          </div>
+          <div className="entry">
+          <TextField variant="outlined" type="text" name="url" id="url" value={updatedBook.url} label="URL" onChange={handleChange} sx={{width: 450}}/>
+          </div>
+        </div>
+        <div>
+          <Button variant="contained" sx={{ml: 7, mt: 4}} onClick={handleUpdate}>Update</Button>
+          <Button variant="contained" sx={{ml: 3, mt: 4}} onClick={handleClose}>Cancel</Button>
+        </div>
+        </Box>
       </Modal>
     </div>
   )
 }
 
 export default BookCard;
+
+/*
+<Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+          <Typography id="modal-modal-title">
+            {book.title}
+          </Typography>
+        <div>
+          <input type="text" name="type" id="type" value={updatedBook.type} label="Type" onChange={handleChange}/>
+          <input type="text" name="title" id="title" value={updatedBook.title} label="Title" onChange={handleChange}/>
+          <input type="text" name="author" id="author" value={updatedBook.author} label="Author" onChange={handleChange}/>
+          <input type="text" name="description" id="description" value={updatedBook.description} label="Description" onChange={handleChange}/>
+          <input type="text" name="yearPublished" id="yearPublished" value={updatedBook.yearPublished} label="Year Published" onChange={handleChange}/>
+        </div>
+        <div>
+          <Button onClick={handleUpdate}>Update</Button>
+          <Button onClick={handleClose}>Cancel</Button>
+        </div>
+      </Modal>
+*/

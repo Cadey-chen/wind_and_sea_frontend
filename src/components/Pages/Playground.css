@@ -24,9 +24,16 @@
 
 .heading {
     position: relative;
-    margin-top: 5vw;
-    font-size: large;
+    margin-top: 18vw;
+    font-size: 60px;
+    margin-right: 45vw;
+    letter-spacing: 0.05em;
     font-family: 'Inter', sans-serif;
+}
+
+.heading > h1 {
+    margin-bottom: 27px;
+    color: #0B3D89;
 }
 
 .book-form-container {

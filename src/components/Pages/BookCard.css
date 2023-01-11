@@ -1,0 +1,20 @@
+.TextField {
+    font-family: 'Inter, sans-serif';
+    font-size: medium;
+}
+
+.entry {
+    margin-top: 2vw;
+    margin-left: 3vw;
+}
+
+.title {
+    margin-top: 2vw;
+    margin-left: 3vw;
+    margin-bottom: 2vw;
+}
+
+.book-title > h3 {
+    font-family: 'Inter';
+    color: #0B3D89;
+}
