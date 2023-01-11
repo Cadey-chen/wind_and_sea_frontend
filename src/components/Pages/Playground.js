@@ -11,6 +11,12 @@ import BookCard from './BookCard';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListSubheader from '@mui/material/ListSubheader';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { shadows } from '@mui/material/styles/shadows';
+import { Typography } from '@mui/material';
 
 function Playground() {
   const dispatch = useDispatch();
@@ -45,31 +51,46 @@ function Playground() {
         <h1>{user && user.username}'s</h1>
         <h1>Space</h1>
       </section>
-      <div>
+      <Card sx={{ml: 125, mt: -60, width: 800, height: 700, boxShadow: 2}}>
+        <CardContent sx={{m: 4}}>
+          <Typography sx={{fontSize: 24, fontFamily: 'Inter', fontWeight: 'medium'}}>
+            Contribute to the resource database here, by
+            adding a new source, or manage the sources 
+            you already uploaded.
+          </Typography>
+        </CardContent>
+        <CardContent>
         <List sx={{
           border: 1,
-          borderColor: 'white',
+          borderColor: '#F7ECFF',
           backgroundColor: '#F7ECFF',
-          mt: 0,
-          ml: 136,
-          width: 700,
+          mt: -2,
+          ml: 6,
+          width: 660,
+          height: 340,
+          boxShadow: 2,
+          maxHeight: 360,
+          overflow: 'auto',
         }}
         subheader={
           <ListSubheader>
-            Contributed Sources
+            <Typography sx={{fontFamily: 'Inter', fontSize: 22}}>
+            My Sources
+            </Typography>
           </ListSubheader>
         }>
            {books && books.map((book) => (
-              <ListItem sx={{mt: 0, mb: 0, ml: 0, mr: 0, borderColor: 'white', width: 400}}>
+              <ListItem sx={{mt: 1, mb: 0, ml: 0, mr: 0, borderColor: 'white', width: 400}}>
                   {book && <BookCard book={book}/>}
               </ListItem>
            ))}
         </List>
-      </div>
-      <div className="book-form-container">
-        {user && <Logout />}
-        {user && <BookForm />}
-      </div>
+        </CardContent>
+        <CardActions>
+          {user && <Logout />}
+          {user && <BookForm />}
+        </CardActions>
+        </Card>
     </div>
   )
 }

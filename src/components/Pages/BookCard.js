@@ -129,22 +129,3 @@ function BookCard({book}) {
 }
 
 export default BookCard;
-
-/*
-<Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-          <Typography id="modal-modal-title">
-            {book.title}
-          </Typography>
-        <div>
-          <input type="text" name="type" id="type" value={updatedBook.type} label="Type" onChange={handleChange}/>
-          <input type="text" name="title" id="title" value={updatedBook.title} label="Title" onChange={handleChange}/>
-          <input type="text" name="author" id="author" value={updatedBook.author} label="Author" onChange={handleChange}/>
-          <input type="text" name="description" id="description" value={updatedBook.description} label="Description" onChange={handleChange}/>
-          <input type="text" name="yearPublished" id="yearPublished" value={updatedBook.yearPublished} label="Year Published" onChange={handleChange}/>
-        </div>
-        <div>
-          <Button onClick={handleUpdate}>Update</Button>
-          <Button onClick={handleClose}>Cancel</Button>
-        </div>
-      </Modal>
-*/

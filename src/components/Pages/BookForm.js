@@ -71,7 +71,7 @@ function BookForm() {
 
   return (
     <div>
-    <Button onClick={handleShow} sx={{ml:35}}>Add New Source</Button>
+    <Button variant="contained" onClick={handleShow} sx={{ml: -5, mt: -3.5}}>Add New Source</Button>
     <Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
       <Box sx={{
         mt: 10,
@@ -83,7 +83,7 @@ function BookForm() {
       }}>
         <form onSubmit={onSubmit}>
           <div className="title">
-            <h2>{book.title}</h2>
+            <h2>New Source: {book.title}</h2>
           </div>
         <div>
           <div className="entry">

@@ -2,8 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout, reset } from '../../features/auth/authSlice';
 import { useNavigate } from 'react-router-dom';
-import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+import { FaSignOutAlt } from 'react-icons/fa';
 import './Register.css';
+import Button from '@mui/material/Button';
 
 function Logout() {
     const navigate = useNavigate();
@@ -17,10 +18,10 @@ function Logout() {
     }
 
   return (
-    <div className="logout-wrap">
-        <button className='btn' onClick={onLogout}>
-            <FaSignOutAlt /> Logout
-        </button>
+    <div>
+        <Button variant='contained' onClick={onLogout} sx={{m: 7, mt: 4}}>
+            <FaSignOutAlt />Logout
+        </Button>
     </div>
   )
 }
