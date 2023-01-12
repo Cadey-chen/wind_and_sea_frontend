@@ -6,6 +6,11 @@ import { login, reset } from '../../features/auth/authSlice';
 import { toast } from 'react-toastify';
 import './Register.css';
 import Spinner from '../Spinner';
+import './LoginForm.css';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import Typography from '@mui/material/Typography';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -55,14 +60,24 @@ function Login() {
     }
 
   return (
-    <>
-    <section className="heading">
+    <div className="loginform-container">
+        <Card sx={{
+      mt: 25,
+      ml: 75,
+      height: 600,
+      width: 600,
+      backgroundColor: '#CFF2FF',
+      boxShadow: 2,
+      borderRadius: '5%',
+      border: 1,
+      borderColor: 'white',
+    }}>
+        <Typography sx={{m: 7, mt: 12, fontSize: 28}}>
         <h1>
             <FaSignInAlt /> Log In
         </h1>
-        <p>Log in to your account</p>
-    </section>
-    
+    </Typography>
+    <CardContent sx={{ml: -32}}>
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>
@@ -78,7 +93,9 @@ function Login() {
             </div>
         </form>
     </section>
-    </>
+    </CardContent>
+    </Card>
+    </div>
   )
 }
 

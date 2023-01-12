@@ -62,9 +62,9 @@ function BookCard({book}) {
 
   return (
     <div>
-      <h3 className="book-title">
+      <Typography sx={{fontFamily: 'Inter', fontSize: 20, fontWeight: 'medium'}}>
         {book.title}
-      </h3>
+      </Typography>
     <Button variant="contained" onClick={handleShow} sx={{mt: 1, mb: 1}}>Edit</Button>
     <Button variant="contained" onClick={handleShowConfirm} sx={{mt: 1, ml: 2, mb: 1}}>Delete</Button>
     <Modal hidebackdrop open={showConfirm} onClose={handleCloseConfirm}
@@ -79,10 +79,11 @@ function BookCard({book}) {
         <Typography id="modal-modal-title" height="2vw"
         sx={{
           m: 5,
+          fontSize: 22,
         }}>Are you sure you want to delete {book.title}?</Typography>
         <Button variant="contained" onClick={handleDelete}
-        sx={{ml: 5, mt: 0}}>Yes</Button>
-        <Button variant="contained" onClick={handleCloseConfirm} sx={{ml: 3, mt: 0}}>Cancel</Button>
+        sx={{ml: 5, mt: 0}} size="large">Yes</Button>
+        <Button variant="contained" onClick={handleCloseConfirm} sx={{ml: 3, mt: 0}} size="large">Cancel</Button>
       </Box>
     </Modal>
     <Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
@@ -119,8 +120,8 @@ function BookCard({book}) {
           </div>
         </div>
         <div>
-          <Button variant="contained" sx={{ml: 7, mt: 4}} onClick={handleUpdate}>Update</Button>
-          <Button variant="contained" sx={{ml: 3, mt: 4}} onClick={handleClose}>Cancel</Button>
+          <Button variant="contained" sx={{ml: 7, mt: 4}} onClick={handleUpdate} size="large">Update</Button>
+          <Button variant="contained" sx={{ml: 3, mt: 4}} onClick={handleClose} size="large">Cancel</Button>
         </div>
         </Box>
       </Modal>

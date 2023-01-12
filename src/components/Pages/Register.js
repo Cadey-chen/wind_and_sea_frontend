@@ -5,6 +5,10 @@ import {FaUser} from 'react-icons/fa';
 import { register, reset } from '../../features/auth/authSlice';
 import { toast } from 'react-toastify';
 import './Register.css';
+import './LoginForm.css';
+import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+import CardContent from '@mui/material/CardContent';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -58,14 +62,21 @@ function Register() {
     }
 
   return (
-    <>
-    <section className="heading">
+    <div className="loginform-container">
+        <Card sx={{
+            width: 600,
+            height: 600,
+            ml: 80,
+            mt: 25,
+            borderRadius: '5%',
+            background: '#CFF2FF',
+        }}>
+    <Typography sx={{mt: 10, fontSize: 23}}>
         <h1>
             <FaUser /> Register
         </h1>
-        <p>Please Register for your account</p>
-    </section>
-    
+    </Typography>
+    <CardContent sx={{ml: -30, mt: -5}}>
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>
@@ -87,7 +98,9 @@ function Register() {
             </div>
         </form>
     </section>
-    </>
+    </CardContent>
+    </Card>
+    </div>
   )
 }
 

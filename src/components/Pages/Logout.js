@@ -19,7 +19,7 @@ function Logout() {
 
   return (
     <div>
-        <Button variant='contained' onClick={onLogout} sx={{m: 7, mt: 4}}>
+        <Button variant='contained' onClick={onLogout} sx={{m: 7, mt: 4}} size="large">
             <FaSignOutAlt />Logout
         </Button>
     </div>

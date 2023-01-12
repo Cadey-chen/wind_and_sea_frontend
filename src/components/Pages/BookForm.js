@@ -71,7 +71,7 @@ function BookForm() {
 
   return (
     <div>
-    <Button variant="contained" onClick={handleShow} sx={{ml: -5, mt: -3.5}}>Add New Source</Button>
+    <Button variant="contained" onClick={handleShow} sx={{ml: -5, mt: -3.5}} size="large">Add New Source</Button>
     <Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
       <Box sx={{
         mt: 10,
@@ -107,8 +107,8 @@ function BookForm() {
           </div>
         </div>
         <div>
-          <Button variant="contained" sx={{ml: 7, mt: 4}} type="submit">Add Source</Button>
-          <Button variant="contained" sx={{ml: 3, mt: 4}} onClick={handleClose}>Cancel</Button>
+          <Button variant="contained" sx={{ml: 7, mt: 4}} type="submit" size="large">Add Source</Button>
+          <Button variant="contained" sx={{ml: 3, mt: 4}} onClick={handleClose} size="large">Cancel</Button>
         </div>
         </form>
         </Box>
@@ -116,41 +116,5 @@ function BookForm() {
     </div>
   )
 }
-
-/*
-<section className='form'>
-        <form onSubmit={onSubmit}>
-            <div className="form-group">
-                <label>Type</label>
-                <input type="text" name="type" id="type" value={book.type} placeholder="e.g. Book, research papers" onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <label>Title</label>
-                <input type="text" name="title" id="title" value={book.title} placeholder="Title" onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <label>Author</label>
-                <input type="text" name="author" id="author" value={book.author} onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <label>Description</label>
-                <input type="text" name="description" id="description" value={book.description} onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <label>Year Published</label>
-                <input type="text" name="yearPublished" id="yearPublished" value={book.yearPublished} onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <label>URL (optional)</label>
-                <input type="text" name="url" id="url" value={book.url} onChange={handleChange}/>
-            </div>
-            <div className="form-group">
-                <button className="btn btn-block" type="submit">
-                    Add Source 
-                </button>
-            </div>
-        </form>
-    </section>
-*/
 
 export default BookForm;
