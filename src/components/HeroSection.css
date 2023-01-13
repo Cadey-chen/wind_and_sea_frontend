@@ -32,15 +32,6 @@ img {
     resize: both;
 }
 
-.hero-container > h1 {
-    color: #092F8E;
-    font-size: 100px;
-    text-align: center;
-    justify-content: center;
-    align-items: left;
-    position: relative;
-}
-
 .heading-wrapper {
     justify-content: left;
     align-items: left;
@@ -55,7 +46,6 @@ img {
     justify-content: left;
     align-items: left;
     padding-left: 15vw;
-    left: 200px;
     margin-top: 1vw;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.1em;

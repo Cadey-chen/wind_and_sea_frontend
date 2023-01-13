@@ -8,10 +8,6 @@ function Footer() {
     <div className='footer-container'>
         <section className="footer-subscription">
             <div className="input-areas">
-                <form>
-                    <input type="email" name="email" placeholder="Your Email Address" className="footer-input"/>
-                    <Button buttonStyle='btn--outline'>Get In Touch</Button>
-                </form>
             </div>
         </section>
         <div className="footer-links">

@@ -18,9 +18,23 @@ function Explore() {
     })
   }, []);
   return (
+    <>
     <div className='explore-container'>
-      {books && <BooksList props={books}/>}
+      <div className="explore-heading-wrapper">
+        <h1>Explore</h1>
+        <p>Explore the Daoism writings in our database,
+          contributed by the vibrant online community!
+        </p>
+      </div>
     </div>
+    <div className="list-background">
+      <div className="line-space">
+      </div>
+      {books && <BooksList props={books}/>}
+      <div className="line-space">
+      </div>
+    </div>
+    </>
   )
 }
 

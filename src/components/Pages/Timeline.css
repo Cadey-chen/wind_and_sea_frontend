@@ -7,7 +7,6 @@
     margin-top: 0vw;
 }
 
-
 .timeline-container {
     display: flex;
     flex-direction: column;
@@ -21,4 +20,37 @@
     height: 105vh;
     width: 100%;
     resize: both;
+}
+
+.timeline-container > h1 {
+    color: #FFFFFF;
+    font-size: 7.5vw;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    padding-left: 57vw;
+    margin-top: 35vw;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.timeline-cards-container {
+    width: 100%;
+    position: relative;
+    height: 300vh;
+    background: rgba(247, 237, 237, 0.6);
+}
+
+.bbt img {
+    border-radius: 4px;
+    padding: 5px;
+    width: 600px;
+    z-index: 998;
+    position: relative;
+    margin-left: 110px;
+    margin-top: 100px;
+}
+
+.line-divider {
+    height: 12vh;
 }

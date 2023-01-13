@@ -1,6 +1,5 @@
 import React from 'react';
 import myImage from '../images/Opening Page Final.jpg';
-import {Button} from './Button';
 import './HeroSection.css';
 import '../App.css';
 

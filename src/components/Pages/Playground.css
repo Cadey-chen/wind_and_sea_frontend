@@ -20,19 +20,21 @@
     height: 120vh;
     width: 100%;
     resize: both;
+    position: relative;
 }
 
-.heading {
+.user-heading {
     position: relative;
-    margin-top: 18vw;
-    font-size: 60px;
-    margin-right: 45vw;
+    margin-top: 20%;
+    font-size: 40px;
+    margin-left: 16%;
     letter-spacing: 0.05em;
     font-family: 'Inter', sans-serif;
+    position: absolute;
 }
 
-.heading > h1 {
-    margin-bottom: 27px;
+.user-heading > h1 {
+    margin-bottom: 20px;
     color: #0B3D89;
 }
 

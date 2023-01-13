@@ -45,11 +45,11 @@ function Playground() {
 
   return (
     <div className='playground-container'>
-      <section className="heading">
+      <div className="user-heading">
         <h1>{user && user.username}'s</h1>
         <h1>Space</h1>
-      </section>
-      <Card sx={{ml: 125, mt: -60, width: 800, height: 700, boxShadow: 2, borderRadius: '2%'}}>
+      </div>
+      <Card sx={{ml: "52%", mt: "8%", width: "43%", height: 700, boxShadow: 2, borderRadius: '2%', position: "absolute"}}>
         <CardContent sx={{m: 4}}>
           <Typography sx={{fontSize: 24, fontFamily: 'Inter', fontWeight: 'medium'}}>
             Contribute to the resource database here, by
@@ -64,7 +64,7 @@ function Playground() {
           backgroundColor: '#F7ECFF',
           mt: -2,
           ml: 6,
-          width: 660,
+          width: '87%',
           height: 360,
           boxShadow: 2,
           maxHeight: 360,

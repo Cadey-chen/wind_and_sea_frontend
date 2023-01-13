@@ -78,6 +78,8 @@ function BookForm() {
         ml: 80,
         width: 600,
         height: 800,
+        maxHeight: 800,
+        overflow: 'auto',
         backgroundColor: 'white',
         border: 1
       }}>
