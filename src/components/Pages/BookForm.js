@@ -42,8 +42,6 @@ function BookForm() {
             userID
         }
 
-        console.log(bookData);
-
         dispatch(createBook(bookData));
         
         setBook({

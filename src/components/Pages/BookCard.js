@@ -20,7 +20,6 @@ import '../../App.css';
 // an are you sure message 
 
 function BookCard({book}) {
-    console.log({book});
     const dispatch = useDispatch();
 
     const [show, setShow] = useState(false);

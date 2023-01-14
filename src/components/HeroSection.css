@@ -7,13 +7,6 @@ img {
     z-index: -1;
 }
 
-.gradient__text {
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
 .solid__text > h1 {
     color: #092F8E;
 }
