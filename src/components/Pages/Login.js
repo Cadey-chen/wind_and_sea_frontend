@@ -62,22 +62,22 @@ function Login() {
   return (
     <div className="loginform-container">
         <Card sx={{
-      mt: 25,
-      ml: 75,
-      height: 600,
-      width: 600,
+      mt: '10%',
+      ml: '32%',
+      height: '60%',
+      width: '35%',
       backgroundColor: '#CFF2FF',
       boxShadow: 2,
       borderRadius: '5%',
       border: 1,
       borderColor: 'white',
     }}>
-        <Typography sx={{m: 7, mt: 12, fontSize: 28}}>
+        <Typography sx={{m: '5%', mt: '20%', fontSize: '1.5vw'}}>
         <h1>
             <FaSignInAlt /> Log In
         </h1>
     </Typography>
-    <CardContent sx={{ml: -32}}>
+    <CardContent sx={{ml: '20%', mt: '15%'}}>
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>

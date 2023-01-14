@@ -49,9 +49,10 @@ function Playground() {
         <h1>{user && user.username}'s</h1>
         <h1>Space</h1>
       </div>
-      <Card sx={{ml: "52%", mt: "8%", width: "43%", height: 700, boxShadow: 2, borderRadius: '2%', position: "absolute"}}>
-        <CardContent sx={{m: 4}}>
-          <Typography sx={{fontSize: 24, fontFamily: 'Inter', fontWeight: 'medium'}}>
+      <Card sx={{ml: "52%", mt: "8%", width: "43%", height: "65%", boxShadow: 2, borderRadius: '2%', position: "absolute",
+                 maxHeight: "70%", overflow: 'auto'}}>
+        <CardContent sx={{m: '5%'}}>
+          <Typography sx={{fontSize: '1.35vw', fontFamily: 'Inter', fontWeight: 'medium'}}>
             Contribute to the resource database here, by
             adding a new source, or manage the sources 
             you uploaded.
@@ -62,24 +63,23 @@ function Playground() {
           border: 1,
           borderColor: '#F7ECFF',
           backgroundColor: '#F7ECFF',
-          mt: -2,
-          ml: 6,
+          mt: '-2%',
+          ml: '6%',
           width: '87%',
-          height: 360,
           boxShadow: 2,
-          maxHeight: 360,
+          maxHeight: '20vw',
           overflow: 'auto',
           borderRadius: '2%',
         }}
         subheader={
           <ListSubheader>
-            <Typography sx={{fontFamily: 'Inter', fontSize: 22}}>
+            <Typography sx={{fontFamily: 'Inter', fontWeight: 800, fontSize: '1.2vw'}}>
             My Sources
             </Typography>
           </ListSubheader>
         }>
            {books && books.map((book) => (
-              <ListItem sx={{mt: 1, mb: 0, ml: 0, mr: 0, borderColor: 'white', width: 400}}>
+              <ListItem sx={{mt: '1%', mb: 0, ml: 0, mr: 0, width: '100%'}}>
                   {book && <BookCard book={book}/>}
               </ListItem>
            ))}

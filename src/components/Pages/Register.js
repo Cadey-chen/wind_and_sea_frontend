@@ -64,19 +64,19 @@ function Register() {
   return (
     <div className="loginform-container">
         <Card sx={{
-            width: 600,
-            height: 600,
-            ml: 80,
-            mt: 25,
+            width: "35%",
+            height: "60%",
+            ml: '32%',
+            mt: '10%',
             borderRadius: '5%',
             background: '#CFF2FF',
         }}>
-    <Typography sx={{mt: 10, fontSize: 23}}>
+    <Typography sx={{mt: '15%', fontSize: "1.5vw"}}>
         <h1>
             <FaUser /> Register
         </h1>
     </Typography>
-    <CardContent sx={{ml: -30, mt: -5}}>
+    <CardContent display="flex" justifyContent="center" sx={{ml: '23%', mt: '10%'}}>
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>

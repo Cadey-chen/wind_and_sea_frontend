@@ -7,28 +7,48 @@ import { RiMenu3Line, RiCloseLin } from 'react-icons/ri';
 import logo from '../images/logo512.png';
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
-    const handleClick = () => setClick(!click);
-    const closeMenu = () => setClick(false);
-
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
-
-    useEffect(() => {
-        showButton();
-    }, []);
-
-    window.addEventListener('resize', showButton);
 
   return (
     <>
+    <nav className="navbar">
+        <div className="navbar-container">
+            <ul className='nav-menu'>
+                <li className='nav-item'>
+                    <Link to='/' className='nav-links'>
+                        Home
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/Concepts' className='nav-links'>
+                        Concepts
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/Timeline' className='nav-links'>
+                        Timeline
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/Explore' className='nav-links'>
+                        Explore
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to='/Playground' className='nav-links'>
+                        Playground
+                    </Link>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </>
+  )
+}
+
+export default Navbar;
+
+/*
+<>
     <nav className="navbar">
         <div className="navbar-container">
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -61,7 +81,4 @@ function Navbar() {
         </div>
     </nav>
     </>
-  )
-}
-
-export default Navbar
+    */

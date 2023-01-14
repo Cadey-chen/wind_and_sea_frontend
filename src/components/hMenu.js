@@ -14,11 +14,11 @@ function hMenu() {
           <a className="menu-item" href="/Timeline">
             Timeline
           </a>
-          <a className="menu-item" href="/Playground">
-            Playground
-          </a>
           <a className="menu-item" href="/Explore">
             Explore
+          </a>
+          <a className="menu-item" href="/Playground">
+            Playground
           </a>
         </Menu>
       );

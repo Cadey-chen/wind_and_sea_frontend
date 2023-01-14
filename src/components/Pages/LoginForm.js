@@ -22,10 +22,10 @@ function LoginForm() {
   return (
     <div className="loginform-container"> 
     <Card sx={{
-      mt: 30,
-      ml: 80,
-      height: 360,
-      width: 600,
+      mt: '15%',
+      ml: '35%',
+      height: '30%',
+      width: '32%',
       backgroundColor: '#CFF2FF',
       boxShadow: 2,
       borderRadius: '5%',
@@ -33,14 +33,14 @@ function LoginForm() {
       borderColor: 'white',
     }}>
       <CardContent>
-        <Typography sx={{fontSize: 24, fontFamily: 'Inter', m: 5, mb: 2, fontWeight: 'medium'}}>
+        <Typography sx={{fontSize: '1.2vw', fontFamily: 'Inter', m: '5%', fontWeight: 'medium'}}>
           Login, or create an account to access your personal Playground. 
           A space to upload Daoism sources to our database. 
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" onClick={navigateRegister} sx={{m: 6, ml: 18}} size="large">Register</Button>
-        <Button variant="contained" onClick={navigateLogin} sx={{m: 6}} size="large">Login</Button>
+        <Button variant="contained" onClick={navigateRegister} sx={{m: '4%', ml: '27%'}} size="large">Register</Button>
+        <Button variant="contained" onClick={navigateLogin} sx={{m: '4%'}} size="large">Login</Button>
       </CardActions>
     </Card>  
     </div>

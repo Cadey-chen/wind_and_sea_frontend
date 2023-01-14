@@ -24,17 +24,15 @@
 }
 
 .user-heading {
-    position: relative;
+    position: absolute;
     margin-top: 20%;
-    font-size: 40px;
+    font-size: 2.5vw;
     margin-left: 16%;
     letter-spacing: 0.05em;
     font-family: 'Inter', sans-serif;
-    position: absolute;
 }
 
 .user-heading > h1 {
-    margin-bottom: 20px;
     color: #0B3D89;
 }
 

@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import '../../App.css';
 import './Explore.css';
 import BooksList from './BooksList';
-import Create from './Create';
 
 function Explore() {
   const [books, setBooks] = useState(null);
@@ -13,7 +12,6 @@ function Explore() {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       setBooks(data);
     })
   }, []);
