@@ -11,40 +11,39 @@ import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 
 function BooksList({props}) {
-    console.log(props.books);
   return (
     <div>
         <div className="title-div">
-        <Typography align="center" variant="h2" sx={{fontSize: 35, fontFamily: 'Inter', m: 6, mt: 10, mb: 2, fontWeight: 'bold', top: 6}}>Collection of Daoism Writings</Typography>
+        <Typography align="center" variant="h2" sx={{fontSize: '2vw', fontFamily: 'Inter', m: '3%', mb: '3%', fontWeight: 'bold'}}>Collection of Daoism Writings</Typography>
         </div>
             {
                 props.books.map((content) => (
                     <div className="list-div">
-                    <Accordion sx={{width: 1000, mb: 2, mt: 2}}>
+                    <Accordion sx={{width: '80%', mb: '3%', mt: '3%'}}>
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon/>}
                         sx={{
-                            height: 80,
+                            height: '5vw',
                             borderRadius: '2%'
                         }}>
-                            <Typography sx={{fontSize: 25, fontFamily: 'Inter', fontWeight: 'medium'}}>{content.title}</Typography>
+                            <Typography sx={{fontSize: '1.35vw', fontFamily: 'Inter', fontWeight: 'bold', m: '1%'}}>{content.title}</Typography>
                         </AccordionSummary>
-                        <AccordionDetails sx={{ml: 2}}>
-                            <List sx={{width: 1000}} className="list-font">
+                        <AccordionDetails sx={{ml: '3%'}}>
+                            <List sx={{width: '100%'}}>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: 25}}>Name: {content.title}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw'}}>Name: {content.title}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: 25}}>Type: {content.type}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw'}}>Type: {content.type}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: 25}}>Author: {content.author}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw'}}>Author: {content.author}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: 25}}>Description: {content.description}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw'}}>Description: {content.description}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                   <Typography sx={{fontSize: 25}}>URL: <a href={content.url}>{content.url}</a></Typography>
+                                   <Typography sx={{fontSize: '1.25vw'}}>URL: <a href={content.url}>{content.url}</a></Typography>
                                 </ListItemText>
                             </List>
                         </AccordionDetails>

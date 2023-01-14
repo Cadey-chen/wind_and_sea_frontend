@@ -70,8 +70,8 @@ function BookCard({book}) {
       </Typography>
       </div>
         <ButtonGroup variant="contained" justifyContent="flex-end" sx={{mt: '2%'}}>
-          <Button variant="contained" onClick={handleShow} sx={{mr: '3%'}}>Edit</Button>
-          <Button variant="contained" onClick={handleShowConfirm} sx={{ml: '0.5%'}}>Delete</Button>
+          <Button size="large" variant="contained" onClick={handleShow} sx={{mr: '10%'}}>Edit</Button>
+          <Button size="large" variant="contained" onClick={handleShowConfirm} sx={{ml: '1%'}}>Delete</Button>
         </ButtonGroup>
       </Box>
     <Modal hidebackdrop open={showConfirm} onClose={handleCloseConfirm}
