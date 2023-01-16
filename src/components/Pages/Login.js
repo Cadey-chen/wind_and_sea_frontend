@@ -63,9 +63,9 @@ function Login() {
     <div className="loginform-container">
         <Card sx={{
       mt: '10%',
-      ml: '30%',
+      ml: '32%',
       height: '60%',
-      width: '35%',
+      width: '36%',
       backgroundColor: '#CFF2FF',
       boxShadow: 2,
       borderRadius: '5%',

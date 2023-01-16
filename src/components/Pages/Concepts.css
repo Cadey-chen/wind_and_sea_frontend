@@ -72,11 +72,11 @@
     border: 0.2vw solid #ddd;
     border-radius: 0.5vw;
     padding: 0.2vw;
-    width: 33%;
+    width: 45%;
     z-index: 998;
     position: relative;
-    margin-top: -4%;
-    margin-left: 60%; 
+    margin-top: 5%;
+    margin-left: 48%; 
 }
 
 .space-divider {
