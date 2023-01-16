@@ -1,12 +1,3 @@
-img {
-    object-fit: fill;
-    width: 100%;
-    height: 87%;
-    margin-top: -1vw;
-    position: relative;
-    z-index: -1;
-}
-
 .solid__text > h1 {
     color: #092F8E;
 }
@@ -20,7 +11,7 @@ img {
     url(../images/Opening\ Page\ Final.jpg);
     background-size: 100% 100%;
     object-fit: fill;
-    height: 100vh;
+    height: 52vw;
     width: 100%;
     resize: both;
 }

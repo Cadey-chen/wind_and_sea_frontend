@@ -15,10 +15,10 @@ function Footer() {
                 <div className="footer-link-items">
                     <ul>
                         <li>
-                    <Link to='./Concepts'>About this Site </Link>
+                    <a href='./Concepts'>About this Site</a>
                     </li>
                     <li>
-                    <Link to='./Playground'> Join the discussion</Link>
+                    <a href='./Playground'> Join the discussion</a>
                     </li>
                     </ul>
                 </div>

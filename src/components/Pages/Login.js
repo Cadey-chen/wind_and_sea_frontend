@@ -63,7 +63,7 @@ function Login() {
     <div className="loginform-container">
         <Card sx={{
       mt: '10%',
-      ml: '32%',
+      ml: '30%',
       height: '60%',
       width: '35%',
       backgroundColor: '#CFF2FF',
@@ -71,20 +71,21 @@ function Login() {
       borderRadius: '5%',
       border: 1,
       borderColor: 'white',
+      overflow:'auto'
     }}>
         <Typography sx={{m: '5%', mt: '20%', fontSize: '1.5vw'}}>
         <h1>
             <FaSignInAlt /> Log In
         </h1>
     </Typography>
-    <CardContent sx={{ml: '20%', mt: '15%'}}>
+    <CardContent sx={{ml: '16%', mt: '2vw'}}>
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>
-            <input type="text" className="form-control" id="name" name='username' value={username} placeholder='Enter Username' onChange={handleChange}/>
+            <input type="text" className="form-control" id="name" name='username' value={username} placeholder='Username' onChange={handleChange}/>
             </div>
             <div className='form-group'>
-            <input type="password" className="form-control" id="password" name='password' value={password} placeholder='Enter Password' onChange={handleChange}/>
+            <input type="password" className="form-control" id="password" name='password' value={password} placeholder='Password' onChange={handleChange}/>
             </div>
             <div className="form-group">
                 <button type="submit" className='btn btn-block'>

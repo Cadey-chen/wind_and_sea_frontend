@@ -50,6 +50,7 @@ function Playground() {
         <h1>{user && user.username}'s</h1>
         <h1>Space</h1>
       </div>
+      <div className="card-wrapper">
       <Card sx={{ml: "52%", mt: "8%", width: "43%", height: "65%", boxShadow: 2, borderRadius: '2%', position: "absolute",
                  maxHeight: "70%", overflow: 'auto'}}>
         <CardContent sx={{m: '5%'}}>
@@ -90,7 +91,8 @@ function Playground() {
           {user && <Logout />}
           {user && <BookForm />}
         </CardActions>
-        </Card>
+      </Card>
+    </div>
     </div>
   )
 }

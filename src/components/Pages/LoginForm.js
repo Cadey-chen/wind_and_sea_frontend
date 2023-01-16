@@ -23,9 +23,9 @@ function LoginForm() {
     <div className="loginform-container"> 
     <Card sx={{
       mt: '15%',
-      ml: '35%',
-      height: '30%',
-      width: '32%',
+      ml: '28%',
+      height: 'auto',
+      width: '45vw',
       backgroundColor: '#CFF2FF',
       boxShadow: 2,
       borderRadius: '5%',
@@ -39,8 +39,8 @@ function LoginForm() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" onClick={navigateRegister} sx={{m: '4%', ml: '27%'}} size="large">Register</Button>
-        <Button variant="contained" onClick={navigateLogin} sx={{m: '4%'}} size="large">Login</Button>
+        <Button variant="contained" onClick={navigateRegister} sx={{zIndex: 2000, m: '2vw', ml: '2vw', maxWidth: '8vw', maxHeight: '4vw'}}>Register</Button>
+        <Button variant="contained" onClick={navigateLogin} sx={{m:'2vw', maxWidth: '8vw', maxHeight: '4vw'}}>Login</Button>
       </CardActions>
     </Card>  
     </div>

@@ -6,8 +6,7 @@ import dark_blue_butterfly from '../../images/Dark_Blue_Butterfly.png';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Light_Beams from '../../images/Light_Beams_2.png';
-import dv3 from '../../images/dotVar3.png';
+import sideBarRectangle from '../../images/SideBarRectangle.png';
 
 function Timeline() {
   return (
@@ -39,11 +38,11 @@ function Timeline() {
             <Typography align="center" sx={{fontSize: '1.5vw', mt: '2%', fontFamily: 'Inter', fontWeight: 'bold'}}>200 BCE</Typography>
           </CardContent>
         </Card>
-    <div className="long-line">
+      <div className="line-divider"></div>
       <div className="side-key">
-        <img src={Light_Beams} alt="Light beams"/>
+        <img src={sideBarRectangle} alt="Light beams"/>
       </div>
-    </div>
+      <div className="line-divider"></div>
     </div>
     </>
   )

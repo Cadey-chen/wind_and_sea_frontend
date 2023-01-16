@@ -64,13 +64,13 @@ function BookCard({book}) {
     <div>
       <Box>
       <div>
-      <Typography sx={{fontFamily: 'Inter', fontSize: '1.2vw', fontWeight: 'medium'}}>
+      <Typography sx={{fontFamily: 'Inter', fontSize: '1.2vw', fontWeight: 'bold'}}>
         {book.title}
       </Typography>
       </div>
         <ButtonGroup variant="contained" justifyContent="flex-end" sx={{mt: '2%'}}>
-          <Button size="large" variant="contained" onClick={handleShow} sx={{mr: '10%'}}>Edit</Button>
-          <Button size="large" variant="contained" onClick={handleShowConfirm} sx={{ml: '1%'}}>Delete</Button>
+          <Button size="large" variant="contained" onClick={handleShow} sx={{mr: '10%', maxHeight: '5vw', maxWidth: '15vw'}}>Edit</Button>
+          <Button size="large" variant="contained" onClick={handleShowConfirm} sx={{ml: '1%', maxHeight: '5vw', maxWidth: '15vw'}}>Delete</Button>
         </ButtonGroup>
       </Box>
     <Modal hidebackdrop open={showConfirm} onClose={handleCloseConfirm}
@@ -78,7 +78,7 @@ function BookCard({book}) {
       <Box position="absolute" top="37%" left="33%" sx={{
         width: '35%',
         height: '25%',
-        maxHeight: '20vw',
+        maxHeight: '30vw',
         backgroundColor: 'white',
         outlineColor: 'black',
         border: 1,
@@ -90,23 +90,23 @@ function BookCard({book}) {
           fontSize: '1.2vw',
         }}>Are you sure you want to delete {book.title}?</Typography>
         <Button variant="contained" onClick={handleDelete}
-        sx={{ml: '8%', mt: '3%'}} size="large">Yes</Button>
-        <Button variant="contained" onClick={handleCloseConfirm} sx={{ml: '4%', mt: '3%'}} size="large">Cancel</Button>
+        sx={{ml: '8%', mt: '3%', maxHeight: '5vw', maxWidth: '15vw'}} size="large">Yes</Button>
+        <Button variant="contained" onClick={handleCloseConfirm} sx={{ml: '4%', mt: '3%', maxHeight: '5vw', maxWidth: '15vw'}} size="large">Cancel</Button>
       </Box>
     </Modal>
     <Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
       <Box sx={{
         mt: '4%',
-        ml: '32%',
-        width: '32%',
+        ml: '30%',
+        width: '40%',
         height: '80%',
-        maxHeight: '40vw',
+        maxHeight: '45vw',
         overflow: 'auto',
         backgroundColor: 'white',
         border: 1
       }}>
           <div className="title">
-            <h2>{book.title}</h2>
+            <Typography sx={{fontSize: '2vw', fontFamily: 'Inter', fontWeight: 'bold'}}>{book.title}</Typography>
           </div>
         <div>
           <div className="entry">
@@ -135,8 +135,8 @@ function BookCard({book}) {
           </div>
         </div>
         <div>
-          <Button variant="contained" sx={{ml: '9%', mt: '5%'}} onClick={handleUpdate} size="large">Update</Button>
-          <Button variant="contained" sx={{ml: '3%', mt: '5%'}} onClick={handleClose} size="large">Cancel</Button>
+          <Button variant="contained" sx={{ml: '7%', mt: '5%', maxHeight: '5vw', maxWidth: '15vw'}} onClick={handleUpdate} size="medium">Update</Button>
+          <Button variant="contained" sx={{ml: '3%', mt: '5%', maxHeight: '5vw', maxWidth: '15vw'}} onClick={handleClose} size="medium">Cancel</Button>
         </div>
         </Box>
       </Modal>

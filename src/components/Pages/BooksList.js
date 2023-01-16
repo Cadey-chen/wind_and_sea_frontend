@@ -14,36 +14,40 @@ function BooksList({props}) {
   return (
     <div>
         <div className="title-div">
-        <Typography align="center" variant="h2" sx={{fontSize: '2vw', fontFamily: 'Inter', m: '3%', mb: '3%', fontWeight: 'bold'}}>Collection of Daoism Writings</Typography>
+        <Typography align="center" variant="h2" sx={{fontSize: '2vw', fontFamily: 'Inter', m: '3%', mb: '3%', fontWeight: 'bold', color: '#0B3D89'}}>Collection of Daoism Writings</Typography>
         </div>
             {
                 props.books.map((content) => (
                     <div className="list-div">
                     <Accordion sx={{width: '80%', mb: '3%', mt: '3%'}}>
                         <AccordionSummary
-                        expandIcon={<ExpandMoreIcon/>}
+                        expandIcon={<ExpandMoreIcon sx={{width: '3.2vw', height: '3.2vw'}}/>}
                         sx={{
-                            height: '5vw',
-                            borderRadius: '2%'
+                            height: '6vw',
+                            borderRadius: '2%',
+                            overflow: 'hidden'
                         }}>
-                            <Typography sx={{fontSize: '1.35vw', fontFamily: 'Inter', fontWeight: 'bold', m: '1%'}}>{content.title}</Typography>
+                            <Typography sx={{fontSize: '1.35vw', fontFamily: 'Inter', fontWeight: 'bold', m: '2%', color: '#0B3D89'}}>{content.title}</Typography>
                         </AccordionSummary>
-                        <AccordionDetails sx={{ml: '3%'}}>
+                        <AccordionDetails sx={{ml: '3%', overflow: 'auto'}}>
                             <List sx={{width: '100%'}}>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: '1.25vw'}}>Name: {content.title}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw', maxWidth: '100%'}}>Name: {content.title}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: '1.25vw'}}>Type: {content.type}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw', maxWidth: '100%'}}>Type: {content.type}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: '1.25vw'}}>Author: {content.author}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw', maxWidth: '100%'}}>Author: {content.author}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                    <Typography sx={{fontSize: '1.25vw'}}>Description: {content.description}</Typography>
+                                    <Typography sx={{fontSize: '1.25vw', maxWidth: '100%'}}>Description: {content.description}</Typography>
                                 </ListItemText>
                                 <ListItemText>
-                                   <Typography sx={{fontSize: '1.25vw'}}>URL: <a href={content.url}>{content.url}</a></Typography>
+                                    <Typography sx={{fontSize: '1.25vw', maxWidth: '100%'}}>Year Published: {content.yearPublished}</Typography>
+                                </ListItemText>
+                                <ListItemText>
+                                   <Typography sx={{fontSize: '1.25vw', maxWidth: '78vw'}}>URL: <a className="link-wrap" href={content.url}>{content.url}</a></Typography>
                                 </ListItemText>
                             </List>
                         </AccordionDetails>

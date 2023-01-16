@@ -68,14 +68,14 @@ function BookForm() {
 
   return (
     <div>
-    <Button variant="contained" onClick={handleShow} sx={{ml: -5, mt: -3.5}} size="large">Add New Source</Button>
+    <Button variant="contained" onClick={handleShow} sx={{ml: '-2vw', mt: '-2.2vw', maxHeight: '5vw', maxWidth: '15vw'}} size="large">Add New Source</Button>
     <Modal open={show} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
       <Box sx={{
         mt: '5%',
-        ml: '35%',
-        width: '30%',
+        ml: '30%',
+        width: '40%',
         height: '80%',
-        maxHeight: '42vw',
+        maxHeight: '45vw',
         overflow: 'auto',
         backgroundColor: 'white',
         border: 1
@@ -111,8 +111,8 @@ function BookForm() {
           </div>
         </div>
         <div>
-          <Button variant="contained" sx={{ml: '10%', mt: '5%'}} type="submit" size="large">Add Source</Button>
-          <Button variant="contained" sx={{ml: '4%', mt: '5%'}} onClick={handleClose} size="large">Cancel</Button>
+          <Button variant="contained" sx={{ml: '7.5%', mt: '5%', maxHeight: '5vw', maxWidth: '15vw'}} type="submit" size="large">Add</Button>
+          <Button variant="contained" sx={{ml: '4%', mt: '5%', maxHeight: '5vw', maxWidth: '15vw'}} onClick={handleClose} size="large">Cancel</Button>
         </div>
         </form>
         </Box>

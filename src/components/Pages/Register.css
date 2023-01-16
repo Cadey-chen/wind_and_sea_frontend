@@ -1,6 +1,7 @@
 .form,
 .content {
-  width: 70%;
+  width: 80%;
+  height: 20%;
 }
 
 .form-group {
@@ -42,7 +43,7 @@
 }
 
 .btn svg {
-  margin-right: 8px;
+  margin-right: 4vw;
 }
 
 .btn-reverse {
@@ -52,7 +53,7 @@
 
 .btn-block {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 4vw;
 }
 
 .btn:hover {

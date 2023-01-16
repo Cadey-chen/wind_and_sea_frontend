@@ -5,3 +5,8 @@
 .title-div {
     margin-top: 3vw;
 }
+
+.link-wrap {
+    max-width: 60vw;
+    overflow-x: 'auto';
+}

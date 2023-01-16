@@ -63,18 +63,19 @@ function Register() {
     <div className="loginform-container">
         <Card sx={{
             width: "35%",
-            height: "60%",
-            ml: '32%',
+            height: "70%",
+            ml: '32.5%',
             mt: '10%',
             borderRadius: '5%',
             background: '#CFF2FF',
+            overflow: 'auto'
         }}>
     <Typography sx={{mt: '15%', fontSize: "1.5vw"}}>
         <h1>
             <FaUser /> Register
         </h1>
     </Typography>
-    <CardContent display="flex" justifyContent="center" sx={{ml: '23%', mt: '10%'}}>
+    <CardContent display="flex" justifyContent="center" sx={{ml: '18%', mt: '10%'}}>
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className='form-group'>
