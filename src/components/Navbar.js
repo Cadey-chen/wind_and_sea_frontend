@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, MenuItem } from '@mui/material';
 import './Navbar.css';
-import { Button } from './Button';
-import { RiMenu3Line, RiCloseLin } from 'react-icons/ri';
-import logo from '../images/logo512.png';
 
 function Navbar() {
 

@@ -16,6 +16,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { toast } from 'react-toastify';
+import Footer from './Footer';
 
 function Playground() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ function Playground() {
   }
 
   return (
+    <>
     <div className='playground-container'>
       <div className="user-heading">
         <h1>{user && user.username}'s</h1>
@@ -94,6 +96,8 @@ function Playground() {
       </Card>
     </div>
     </div>
+    <Footer />
+    </>
   )
 }
 

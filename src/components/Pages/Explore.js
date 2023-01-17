@@ -2,12 +2,14 @@ import React, {useEffect, useState} from 'react';
 import '../../App.css';
 import './Explore.css';
 import BooksList from './BooksList';
+import Footer from './Footer';
+import APP_URL from '../../config/Config';
 
 function Explore() {
   const [books, setBooks] = useState(null);
 
   useEffect(() => {
-    fetch('https://dwrestapi.herokuapp.com/books/get')
+    fetch(APP_URL + 'books/get')
     .then(res => {
       return res.json();
     })
@@ -32,6 +34,7 @@ function Explore() {
       <div className="line-space">
       </div>
     </div>
+    <Footer />
     </>
   )
 }

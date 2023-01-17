@@ -33,7 +33,7 @@ function LoginForm() {
       borderColor: 'white',
     }}>
       <CardContent>
-        <Typography sx={{fontSize: '1.2vw', fontFamily: 'Inter', m: '5%', fontWeight: 'medium'}}>
+        <Typography sx={{fontSize: '1.2vw', fontFamily: 'Inter', m: '5%', fontWeight: 'medium', color: '#0B3D89'}}>
           Login, or create an account to access your personal Playground. 
           A space to upload Daoism sources to our database. 
         </Typography>

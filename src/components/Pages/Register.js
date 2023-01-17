@@ -9,6 +9,7 @@ import './LoginForm.css';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
+import PersonIcon from '@mui/icons-material/Person';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -70,9 +71,9 @@ function Register() {
             background: '#CFF2FF',
             overflow: 'auto'
         }}>
-    <Typography sx={{mt: '15%', fontSize: "1.5vw"}}>
+    <Typography sx={{mt: '15%', fontSize: "1.5vw", color: '#0B3D89'}}>
         <h1>
-            <FaUser /> Register
+            <PersonIcon color="#0B3D89" fontSize="3.5vw"/> Register
         </h1>
     </Typography>
     <CardContent display="flex" justifyContent="center" sx={{ml: '18%', mt: '10%'}}>

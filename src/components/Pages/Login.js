@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { FaSignInAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login, reset } from '../../features/auth/authSlice';
@@ -9,8 +8,8 @@ import Spinner from '../Spinner';
 import './LoginForm.css';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
+import LoginIcon from '@mui/icons-material/Login';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -73,9 +72,9 @@ function Login() {
       borderColor: 'white',
       overflow:'auto'
     }}>
-        <Typography sx={{m: '5%', mt: '20%', fontSize: '1.5vw'}}>
+        <Typography sx={{m: '5%', mt: '20%', fontSize: '1.5vw', color: '#0B3D89'}}>
         <h1>
-            <FaSignInAlt /> Log In
+            <LoginIcon color="#0B3D89" fontSize="3vw"/> Log In
         </h1>
     </Typography>
     <CardContent sx={{ml: '16%', mt: '2vw'}}>

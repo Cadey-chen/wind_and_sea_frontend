@@ -1,8 +1,11 @@
 import axios from 'axios';
+import APP_URL from '../../config/Config';
+const REG_URL = APP_URL + 'users/create';
+const LOGIN_URL = APP_URL + 'users/login';
 
 // Register user
 const register = async (userData) => {
-    const response = await axios.post('https://dwrestapi.herokuapp.com/users/create', userData);
+    const response = await axios.post(REG_URL, userData);
 
     if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data.user));
@@ -14,7 +17,7 @@ const register = async (userData) => {
 // Log in user 
 const login = async (userData) => {
 
-    const response = await axios.post('https://dwrestapi.herokuapp.com/users/login', userData);
+    const response = await axios.post(LOGIN_URL, userData);
 
     if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data.user));

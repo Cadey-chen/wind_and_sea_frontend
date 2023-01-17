@@ -40,12 +40,12 @@
     width: 27%;
     z-index: 998;
     position: relative;
-    margin-left: 5%;
-    margin-top: 10%;
+    margin-left: 4.5%;
+    margin-top: 3%;
 }
 
 .line-divider {
-    height: 7vw;
+    height: 5vw;
 }
 
 .dbbt img {
@@ -55,8 +55,8 @@
     width: 27%;
     z-index: 998;
     position: relative;
-    margin-right: 5%;
-    margin-top: 15%;
+    margin-right: 4%;
+    margin-top: -18%;
 }
 
 .image-divider {
@@ -72,7 +72,7 @@
     z-index: 998;
     position: relative;
     margin-left: 6%;
-    margin-top: 4%;
+    margin-top: -122%;
 }
 
 @media (max-width: 500px) {
